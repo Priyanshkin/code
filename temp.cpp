@@ -1,21 +1,32 @@
+
+
 #include<iostream>
+#include<stdio.h>
 using namespace std;
-template<class T1,class T2>
-class abc{
-public:
-T1 data1;
-T2 data2;
-abc(T1 a,T2 b){
-this->data1=a;
-this->data2=b;
+int n;
+int count=0;
+
+void check(){
+for(int i=1;i<=n;i++){
+    if(n%i==0){
+count++;}
+// }
+//4%1=0,4%2=0,4%3=1,4%4=0,
+if(count>2&&n%i==1){ 
+   cout<<"prime";
+
+   }  
+ if(count>2){
+    cout<<" co prime number"<<endl;
+
+ 
 }
-void show(){
-cout<<this->data1<<this->data2<<endl;
+}
 }
 
-};
+
 int main(){
-abc<char,float>obj('c',123);
-obj.show();
-
+    cin>>n;
+    check();
+    return 0;
 }
