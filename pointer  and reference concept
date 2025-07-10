@@ -1,0 +1,25 @@
+
+//uses the pointer 
+#include <iostream>
+using namespace std;
+void fun(int *accept1,int *accept2){
+  cout<<&accept1<<endl<<"accept2"<<&accept2<<endl;
+  int temp=*accept1;
+  int temp1=*accept2;
+  *accept1=temp1;
+  *accept2=temp;
+  cout<<*accept1<<endl<<"accept2"<<*accept2<<endl<<temp<<endl;
+}
+int main() 
+{  
+  int value1=50;
+  int *value1pointer=&value1;
+  int value2=60;
+  int *value2pointer=&value2;
+  fun(value1pointer,value2pointer);
+  cout<<value1<<endl<<"value2"<<value2<<endl;
+    //cout<<value1<<endl<<"accept2"<<value2pointer<<endl<<&value2;
+
+    cout << "Hello, World!";
+    return 0;
+}
